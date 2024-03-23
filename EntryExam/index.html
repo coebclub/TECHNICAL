@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .signup-page{
+            display: none;
+        }
+        .login-page{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 login-page">
+        <div class="row">
+            <div class="col-md-6 " >
+                <!-- Login Form -->
+                <div class="card">
+                    <div class="card-header">Login</div>
+                    <div class="card-body">
+                        <form action="login.php" method="POST">
+                            <div class="form-group">
+                                <label for="login_register">Registration Number:</label>
+                                <input type="number" class="form-control" id="login_register" name="login_register" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login_password">Password:</label>
+                                <input type="password" class="form-control" id="login_password" name="login_password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <b onclick="signup()">Don't have an account!</b>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Signup Form -->
+                <div class="card">
+                    <div class="card-body">
+                       <img src="lin.jpg" alt="Another Image" class="img-fluid custom-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 signup-page">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Signup Form -->
+                <div class="card">
+                    <div class="card-header">Signup</div>
+                    <div class="card-body">
+                        <form action="signup.php" method="POST">
+                            <div class="form-group">
+                                <label for="signup_name">Name:</label>
+                                <input type="text" class="form-control" id="signup_name" name="signup_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup_email">Email:</label>
+                                <input type="email" class="form-control" id="signup_email" name="signup_email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup_register">Registration Number:</label>
+                                <input type="number" class="form-control" id="signup_register" name="signup_register" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup_password">Password:</label>
+                                <input type="password" class="form-control" id="signup_password" name="signup_password" required>
+                            </div>
+                            <button type="submit" class="btn btn-success">Signup</button>
+                            <b onclick="login()">Already have an account!</b>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="sup.jpg" alt="Another Image" class="img-fluid custom-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function login(){
+            var signupPage = document.getElementsByClassName("signup-page")[0];
+            var loginPage = document.getElementsByClassName("login-page")[0];
+            signupPage.style.display = "none";
+            loginPage.style.display = "block";
+        }
+        function signup(){
+            var loginPage = document.getElementsByClassName("login-page")[0];
+            var signupPage = document.getElementsByClassName("signup-page")[0];
+            loginPage.style.display = "none";
+            signupPage.style.display = "block";
+        }
+    </script>
+    
+    <!-- Bootstrap JS (Optional - for certain Bootstrap features) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
 

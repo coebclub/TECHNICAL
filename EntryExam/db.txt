@@ -1,6 +1,6 @@
 
 CREATE DATABASE COEB_CLUB;
-
+data edited
 USE COEB_CLUB;
 
 CREATE TABLE users (
